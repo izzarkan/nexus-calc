@@ -1,0 +1,160 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+    margin: 0;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-rows: repeat(5, auto); /* 5 rows */
+    gap: 10px;
+    width: 250px;
+    margin: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equal {
+    grid-column: span 2;
+}
+
+button {
+    background-color: #bfeeee;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color:hsl(180, 58.00%, 50%);
+}
+
+button:active {
+    background-color: hsl(180, 58.00%, 75%);
+}
+
+button:focus {
+    outline: none;
+}
+
+.calculator {
+    width: 260px;
+}
+
+#display {
+    width: 250px;
+    padding: 10px;
+    text-align: right;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator-container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center horizontally */
+    gap: 5px;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Open Conversion Button */
+#open-modal-btn {
+    padding: 10px 20px;
+    gap: 1px;
+    background-color: #bfeeee;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 250px; /* Align with the width of the display */
+    margin-top: 10px;
+}
+
+#open-modal-btn:hover {
+    background-color: hsl(180, 58.00%, 50%);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for conversion container */
+#conversion-container {
+    margin-top: 20px;
+}
+
+select, input {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Result input */
+#conversion-result {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

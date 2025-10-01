@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Calc -->
+<div class="calculator-container" id="calculator-container">
+    <input type="text" id="display" disabled>
+    <!-- A button to open the modal -->
+    <button id="open-modal-btn">Open Conversion</button>
+    <div class="calculator">
+
+        <div class="button-grid">
+            <div class="button"><button>C</button></div>
+            <div class="button"><button>←</button></div>
+            <div class="button"><button>%</button></div>
+            <div class="button"><button>÷</button></div>
+
+            <div class="button"><button>7</button></div>
+            <div class="button"><button>8</button></div>
+            <div class="button"><button>9</button></div>
+            <div class="button"><button>×</button></div>
+
+            <div class="button"><button>4</button></div>
+            <div class="button"><button>5</button></div>
+            <div class="button"><button>6</button></div>
+            <div class="button"><button>-</button></div>
+
+            <div class="button"><button>1</button></div>
+            <div class="button"><button>2</button></div>
+            <div class="button"><button>3</button></div>
+            <div class="button"><button>+</button></div>
+
+            <div class="button"><button>0</button></div>
+            <div class="button"><button>.</button></div>
+            <div class="button equal"><button>=</button></div>
+        </div>
+    </div>
+</div>
+<!-- Conversion -->
+<!-- Modal Container -->
+<div id="conversion-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Unit Conversion</h2>
+        <div id="conversion-container">
+            <select id="conversion-type">
+                <option value="time">Time</option>
+                <!-- Add other options for future conversions like length, temperature, etc. -->
+            </select>
+            <input type="number" id="convert-value" placeholder="Enter value" />
+            <span>to</span>
+            <select id="time-units-from">
+                <option value="seconds">Seconds</option>
+                <option value="minutes">Minutes</option>
+                <option value="hours">Hours</option>
+                <option value="days">Days</option>
+                <option value="years">Years</option>
+            </select>
+            <span>→</span>
+            <select id="time-units-to">
+                <option value="seconds">Seconds</option>
+                <option value="minutes">Minutes</option>
+                <option value="hours">Hours</option>
+                <option value="days">Days</option>
+                <option value="months">Months</option>
+                <option value="years">Years</option>
+            </select>
+            <button id="convert-btn">Convert</button>
+            <input type="text" id="conversion-result" readonly placeholder="Result" />
+        </div>
+    </div>
+</div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

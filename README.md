@@ -1,2 +1,3 @@
-# projects
-For my projects, duh.
+# Nexus Calculator
+
+INITIAL COMMIT
